@@ -25,6 +25,7 @@
             UniqueIdentifier = uniqueIdentifier;
 
         }
+
         public void AddGame(Game game)
         {
             Games.Add(game);
