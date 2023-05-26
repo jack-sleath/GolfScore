@@ -16,4 +16,12 @@
     <PackageReference Include="coverlet.collector" Version="3.1.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GolfScore.API\GolfScore.API.csproj" />
+    <ProjectReference Include="..\GolfScore.Exceptions\GolfScore.Exceptions.csproj" />
+    <ProjectReference Include="..\GolfScore.Models\GolfScore.Models.csproj" />
+    <ProjectReference Include="..\GolfScore.Repositories\GolfScore.Repositories.csproj" />
+    <ProjectReference Include="..\GolfScore.Services\GolfScore.Services.csproj" />
+  </ItemGroup>
+
 </Project>

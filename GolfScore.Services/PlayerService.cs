@@ -19,6 +19,12 @@ namespace GolfScore.Services
             return bleh;
         }
 
+        public void DeletePlayer(string externalIdentifier, string authCode)
+        {
+
+            _playerRepository.DeletePlayer(externalIdentifier);
+        }
+
         public Player GetPlayer(string externalIdentifier, string authCode)
         {
             return new Player("BrianTest", "😎", "", "brian@test.com");

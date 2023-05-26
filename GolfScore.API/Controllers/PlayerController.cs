@@ -1,5 +1,4 @@
-﻿using GolfScore.Exceptions;
-using GolfScore.Models.Request;
+﻿using GolfScore.Models.Request;
 using GolfScore.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 

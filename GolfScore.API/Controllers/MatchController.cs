@@ -4,7 +4,7 @@ namespace GolfScore.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class MatchController : BaseController
+    public class MatchController : ControllerBase
     {
     }
 }

@@ -24,5 +24,10 @@ namespace GolfScore.Repositories
         {
             throw new NotImplementedException();
         }
+
+        public void DeletePlayer(string externalIdentifier)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
