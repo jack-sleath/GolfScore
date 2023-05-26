@@ -24,7 +24,13 @@ namespace GolfScore.API.Controllers
         [HttpPost]
         public IActionResult CreatePlayer(CreatePlayerRequest request)
         {
-            return HandleRequest(() => _playerService.CreatePlayer(request));
+            return HandleCreate(() => _playerService.CreatePlayer(request));
+        }
+
+        [HttpDelete]
+        public IActionResult DeletePlayer(string externalIdentifier, string authCode)
+        {
+            return HandleDelete(() => _playerService.DeletePlayer(externalIdentifier, authCode));
         }
     }
 }

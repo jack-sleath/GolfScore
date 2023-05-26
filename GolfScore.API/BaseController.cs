@@ -31,7 +31,7 @@ namespace GolfScore.API
             return HandleAction(() =>
             {
                 action.Invoke();
-                return StatusCode(_success);
+                return StatusCode(_updated);
             });
         }
 
