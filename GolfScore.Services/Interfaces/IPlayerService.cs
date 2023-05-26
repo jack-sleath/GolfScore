@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using GolfScore.Models;
+using GolfScore.Models.Request;
 
 namespace GolfScore.Services.Interfaces
 {
     public interface IPlayerService
     {
+        Player GetPlayer(string externalIdentifier, string authCode);
+        Player CreatePlayer(CreatePlayerRequest request);
     }
 }

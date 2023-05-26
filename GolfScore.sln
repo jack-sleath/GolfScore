@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GolfScore.Services", "GolfS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GolfScore.Repositories", "GolfScore.Repositories\GolfScore.Repositories.csproj", "{FD3E8053-684D-407C-B880-C05257BA88F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GolfScore.Exceptions", "GolfScore.Exceptions\GolfScore.Exceptions.csproj", "{C8D95001-FE18-4396-B845-4569B114976C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{FD3E8053-684D-407C-B880-C05257BA88F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD3E8053-684D-407C-B880-C05257BA88F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD3E8053-684D-407C-B880-C05257BA88F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8D95001-FE18-4396-B845-4569B114976C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8D95001-FE18-4396-B845-4569B114976C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8D95001-FE18-4396-B845-4569B114976C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8D95001-FE18-4396-B845-4569B114976C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

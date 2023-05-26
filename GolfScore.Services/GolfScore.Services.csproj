@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GolfScore.Exceptions\GolfScore.Exceptions.csproj" />
+    <ProjectReference Include="..\GolfScore.Models\GolfScore.Models.csproj" />
+    <ProjectReference Include="..\GolfScore.Repositories\GolfScore.Repositories.csproj" />
+  </ItemGroup>
+
 </Project>
