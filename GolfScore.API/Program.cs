@@ -2,6 +2,8 @@ using GolfScore.Repositories;
 using GolfScore.Repositories.Interfaces;
 using GolfScore.Services;
 using GolfScore.Services.Interfaces;
+using Microsoft.Azure.Cosmos;
+using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,22 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddHttpClient();
+
+string cosmosDbConnection = builder.Configuration["CosmosDBConnection"];
+builder.Services.AddSingleton<CosmosClient>(serviceProvider =>
+{
+    IHttpClientFactory httpClientFactory = serviceProvider.GetRequiredService<IHttpClientFactory>();
+
+    CosmosClientOptions cosmosClientOptions = new CosmosClientOptions
+    {
+        HttpClientFactory = httpClientFactory.CreateClient,
+        ConnectionMode = ConnectionMode.Gateway
+    };
+
+    return new CosmosClient(cosmosDbConnection, cosmosClientOptions);
+});
 
 builder.Services.AddScoped<IPlayerService, PlayerService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
