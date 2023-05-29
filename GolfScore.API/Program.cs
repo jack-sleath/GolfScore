@@ -3,7 +3,6 @@ using GolfScore.Repositories.Interfaces;
 using GolfScore.Services;
 using GolfScore.Services.Interfaces;
 using Microsoft.Azure.Cosmos;
-using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,6 +29,8 @@ builder.Services.AddSingleton<CosmosClient>(serviceProvider =>
     return new CosmosClient(cosmosDbConnection, cosmosClientOptions);
 });
 
+builder.Services.AddScoped<ICourseService, CourseService>();
+builder.Services.AddScoped<ICourseRepository, CourseRepository>();
 builder.Services.AddScoped<IPlayerService, PlayerService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IPlayerRepository, PlayerRepository>();

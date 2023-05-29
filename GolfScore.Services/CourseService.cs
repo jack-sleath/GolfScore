@@ -3,11 +3,6 @@ using GolfScore.Models;
 using GolfScore.Models.Request;
 using GolfScore.Repositories.Interfaces;
 using GolfScore.Services.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GolfScore.Services
 {

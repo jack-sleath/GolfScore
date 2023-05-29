@@ -1,14 +1,10 @@
 ﻿using GolfScore.Models;
+using GolfScore.Repositories.Interfaces;
 using Microsoft.Azure.Cosmos;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GolfScore.Repositories
 {
-    public class CourseRepository
+    public class CourseRepository : ICourseRepository
     {
         private readonly CosmosClient _cosmosClient;
         private Container _container;

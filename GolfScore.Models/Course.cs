@@ -2,7 +2,7 @@
 {
     public class Course : BaseCosmosEntity
     {
-        public static Course Create(string name, string externalId, bool isFictional, Location? coordinates = null)
+        public static Course Create(string name, string? externalId, bool isFictional, Location? coordinates = null)
         {
             var entity = BaseCosmosEntity.Create<Course>(typeof(Course).Name);
             entity.ExternalId = externalId;
@@ -19,12 +19,11 @@
         public bool IsVerified { get; private set; } = false;
         public List<Hole> Holes { get; private set; } = new List<Hole>();
         public Dictionary<Guid, DateTime> Editors { get; private set; } = new Dictionary<Guid, DateTime>();
-        public Course(string name, bool isFictional, string externalId = null)
+        public Course()
         {
-            Name = name;
-            ExternalId = externalId;
-            IsFictional = isFictional;
+
         }
+
         public void AddEditor(Guid PlayerId, DateTime editDateTime)
         {
             Editors.Add(PlayerId, editDateTime);
