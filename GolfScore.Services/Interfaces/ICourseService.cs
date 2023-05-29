@@ -5,6 +5,6 @@ namespace GolfScore.Services.Interfaces
 {
     public interface ICourseService
     {
-        Course CreateCourse(CreateCourseRequest request);
+        Task<Course> CreateCourse(CreateCourseRequest request);
     }
 }

@@ -1,7 +1,17 @@
 ﻿namespace GolfScore.Models
 {
-    public class Course
+    public class Course : BaseCosmosEntity
     {
+        public static Course Create(string name, string externalId, bool isFictional, Location? coordinates = null)
+        {
+            var entity = BaseCosmosEntity.Create<Course>(typeof(Course).Name);
+            entity.ExternalId = externalId;
+            entity.Name = name;
+            entity.IsFictional = isFictional;
+            entity.Coordinates = coordinates;
+            return entity;
+        }
+
         public string? ExternalId { get; private set; }
         public string Name { get; private set; }
         public Location? Coordinates { get; private set; } = null;

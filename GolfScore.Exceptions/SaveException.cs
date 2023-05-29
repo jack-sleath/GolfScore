@@ -1,15 +1,15 @@
 ﻿namespace GolfScore.Exceptions
 {
-    public class PlayerSaveException : BadRequestException
+    public class SaveException : BadRequestException
     {
-        public PlayerSaveException(Dictionary<string, string> propertiesWithError)
+        public SaveException(Dictionary<string, string> propertiesWithError)
        : base($"{BeautifyPropertyErrors(propertiesWithError)}") { }
-        public PlayerSaveException(KeyValuePair<string, string> propertyError)
+        public SaveException(KeyValuePair<string, string> propertyError)
        : base($"{BeautifyPropertyError(propertyError)}") { }
 
         private static string BeautifyPropertyError(KeyValuePair<string, string> propertyError)
         {
-            return $"{propertyError.Key} - {propertyError.Value}";
+            return $"{propertyError.Key} - {propertyError.Value}.";
         }
 
         private static string BeautifyPropertyErrors(Dictionary<string, string> propertiesWithError)

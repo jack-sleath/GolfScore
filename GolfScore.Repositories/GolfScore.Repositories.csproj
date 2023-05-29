@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.34.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\GolfScore.Models\GolfScore.Models.csproj" />
   </ItemGroup>
 
