@@ -14,7 +14,12 @@ namespace GolfScore.Services
             _courserepository = courseRepository;
         }
 
-        public async Task<Course> CreateCourse(CreateCourseRequest request)
+        public Course AddHoles(Guid courseId, List<Hole> holes)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Course CreateCourse(CreateCourseRequest request)
         {
             if (string.IsNullOrEmpty(request.Name))
             {
@@ -23,7 +28,7 @@ namespace GolfScore.Services
 
             var course = Course.Create(request.Name, request.ExternalId, request.IsFictional, request.Coordinates);
 
-            await _courserepository.UpsertAsync(course);
+            Task.Run(async () => await _courserepository.UpsertAsync(course));
 
             return course;
         }
