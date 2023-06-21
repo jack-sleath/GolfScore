@@ -24,7 +24,9 @@
 
         }
 
-
+        public void AddHoles(List<Hole> newHoles) {
+            Holes = newHoles;
+        }
 
         public void AddEditor(Guid PlayerId, DateTime editDateTime)
         {

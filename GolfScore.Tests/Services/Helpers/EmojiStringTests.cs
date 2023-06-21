@@ -20,15 +20,6 @@ namespace GolfScore.Tests.Services.Helpers
             Assert.That(EmojiString.ValidProfile(testValue), Is.EqualTo(expectedResult));
         }
 
-        //[Test]
-        //[TestCase(1, "😀")]
-        //[TestCase(7, "👩🏽‍🤝‍🧑🏿")]
-        //[TestCase(2, "👨🏼")]
-        //[TestCase(4, "🕵🏿‍♀️")]
-        //[TestCase(2, "😂😂")]
-        //public void ProfileMatchCount(int expectedResult, string testValue)
-        //{
-        //    Assert.That(EmojiString.HowManyMatches(testValue), Is.EqualTo(expectedResult));
-        //}
+
     }
 }
